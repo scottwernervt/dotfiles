@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -16,7 +12,7 @@ export TERM=rxvt-unicode
 
 # Color Command Prompt
 # http://unix.stackexchange.com/a/124408/222247
-export PS1='[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] : \[\e[0m\]\t\[\e[0m\]]\n$ '
+PS1='[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] : \[\e[0m\]\t\[\e[0m\]]\n$ '
 
 # Autocomplete when using sudo
 complete -cf sudo
@@ -24,11 +20,16 @@ complete -cf sudo
 # Do not save history if space proceeds command
 HISTCONTROL=ignorespace
 
-# Build android apps from command line
-export ANDROID_HOME=/opt/android-sdk
-
 # Alias
+alias mv='mv -v'
+alias rm='rm -v'
+alias cp='cp -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias nemo="nemo --no-desktop"
-alias lock="light-locker-command -l"
+alias nemo='nemo --no-desktop'
+
+# Lock screen
+alias lock='light-locker-command -l'
+
+# Build android apps from command line
+export ANDROID_HOME=/opt/android-sdk
