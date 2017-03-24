@@ -14,6 +14,8 @@ export TERM=rxvt-unicode
 # http://unix.stackexchange.com/a/124408/222247
 PS1='[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] : \[\e[0m\]\t\[\e[0m\]]\n$ '
 
+PATH=$PATH:$HOME/apps/WebStorm-171.3780.79/bin:$HOME/apps/pycharm-2016.3.3/bin
+
 # Autocomplete when using sudo
 complete -cf sudo
 
@@ -33,3 +35,6 @@ alias lock='light-locker-command -l'
 
 # Build android apps from command line
 export ANDROID_HOME=/opt/android-sdk
+
+# Java: Non-reparenting window managers user should set the following environment variable
+export _JAVA_AWT_WM_NONREPARENTING=1
