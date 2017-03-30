@@ -157,6 +157,9 @@ bindsym $mod+r mode "resize"
 # Float by APPLICATION (WM_CLASS)
 for_window [class="File-roller"] floating enable, border normal
 for_window [class="keepassxc"] floating enable; resize shrink width 640px; resize grow width 640px; resize shrink height 720px; resize grow height 720px;
+for_window [title="chromeIPass"] floating enabled, border normal
+for_window [window_role="pop-up"] floating enable, border normal
+
 
 # For instance: Assume you are on workspace "1: www" and switch to "2: IM" using 
 # mod+2 because somebody sent you a message. You don’t need to remember where you 
@@ -223,6 +226,7 @@ exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id wicd-gtk --tray
 exec --no-startup-id dropbox start
 exec --no-startup-id redshift-gtk
+exec --no-startup-id keepassxc 
 exec --no-startup-id /home/swerner/.fehbg
 
 # startup programs on workspace
