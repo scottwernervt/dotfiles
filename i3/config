@@ -153,13 +153,15 @@ bindsym $mod+r mode "resize"
 #
 # CUSTOMIZATION STARTS HERE
 #
+set $normalBorder 4
+set $floatBorder 6
 
 # Float by APPLICATION (WM_CLASS)
-for_window [class="File-roller"] floating enable, border normal
+for_window [class="File-roller"] floating enable, border pixel $floatBorder
 for_window [class="keepassxc"] floating enable; resize shrink width 640px; resize grow width 640px; resize shrink height 720px; resize grow height 720px;
-for_window [title="chromeIPass"] floating enabled, border normal
-for_window [window_role="pop-up"] floating enable, border normal
-
+for_window [title="chromeIPass"] floating enabled, border pixel $floatBorder
+for_window [window_role="pop-up"] floating enable, border pixel $floatBorder
+for_window [class="Eog"] border pixel $normalBorder
 
 # For instance: Assume you are on workspace "1: www" and switch to "2: IM" using 
 # mod+2 because somebody sent you a message. You don’t need to remember where you 
@@ -167,7 +169,8 @@ for_window [window_role="pop-up"] floating enable, border normal
 workspace_auto_back_and_forth yes
 
 # Border style for new windows
-new_window pixel 6
+new_window pixel $normalBorder
+new_float pixel $floatBorder
 
 # marks on windows are drawn in their window decoration.
 show_marks yes
