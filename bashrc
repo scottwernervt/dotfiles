@@ -27,6 +27,7 @@ alias cp='cp -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nemo='nemo --no-desktop'
+alias Chrome="chromium"
 
 # Lock screen
 alias lock='light-locker-command -l'
@@ -36,3 +37,6 @@ export ANDROID_HOME=/opt/android-sdk
 
 # Java: Non-reparenting window managers user should set the following environment variable
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# added by travis gem
+[ -f /home/swerner/.travis/travis.sh ] && source /home/swerner/.travis/travis.sh
