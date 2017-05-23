@@ -20,6 +20,10 @@ complete -cf sudo
 # Do not save history if space proceeds command
 HISTCONTROL=ignorespace
 
+# Default editor
+export VISUAL=nano
+export EDITOR="$VISUAL"
+
 # Alias
 alias mv='mv -v'
 alias rm='rm -v'
