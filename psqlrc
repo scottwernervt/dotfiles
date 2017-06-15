@@ -1,0 +1,30 @@
+-- main psql prompt
+\set PROMPT1 '[psql://%033[0;36;29m%]%n%033[0m%]@%`hostname`:%> %033[0m%]: %033[34m%]%/%[%033[0m%] : %`date +"%T"`] \n%# '
+
+-- secondary psql prompt for incomplete queries
+\set PROMPT2 '- '
+
+-- show 'null' instead of blank space ''
+-- \pset null '<null>'
+
+-- autocomplete select, where, etc to uppercase
+\set COMP_KEYWORD_CASE upper
+
+-- vertical output if they do not fit in horizontal layout
+\x auto
+
+-- shows how long statements/queries took after running them
+\timing on
+
+-- if you're in a transaction and you've made a typo that produced an error, you don't have to roll 
+-- back the whole thing, it will automatically roll it back to the automatic savepoint that will 
+--- have been created by psql before your erroneous statement
+\set ON_ERROR_ROLLBACK
+
+-- helpers
+\set version 'SELECT version();'
+\set extensions 'select * from pg_available_extensions;'
+
+-- output
+\echo 'Type :version to see the PostgreSQL version.' 
+\echo 'Type :extensions to see the available extensions.'
