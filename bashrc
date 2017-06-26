@@ -30,7 +30,7 @@ alias rm='rm -v'
 alias cp='cp -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias nemo='nemo --no-desktop'
+alias nemo='nemo'
 alias Chrome="chromium"
 
 # Lock screen
