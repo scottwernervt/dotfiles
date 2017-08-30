@@ -1,4 +1,3 @@
-
 DOTFILES
 ===================
 
@@ -12,10 +11,15 @@ Themes
  3. [base16-xresources](https://github.com/chriskempson/base16-xresources)
 
 Clone to Another Machine
--------
+------------------------
 
  1. `git clone git://github.com/scottwernervt/dotfiles.git`
  2. `ln -s ~/dotfiles/bashrc ~/.bashrc`
+
+Testing
+-------
+
+`source ~/.bashrc`
 
 References
 ----------
