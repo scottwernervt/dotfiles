@@ -35,6 +35,9 @@ fi
 # Start i3 window manager
 exec i3 -V >> ~/.config/i3/logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
 
+# Start standalone composite manager for transparency
+exec compton -CGb
+
 # Set desktop background: https://wiki.archlinux.org/index.php/Feh
 sh ~/.fehbg &
 
