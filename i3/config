@@ -158,6 +158,7 @@ set $floatBorder 6
 
 # Float by APPLICATION (WM_CLASS)
 for_window [class="File-roller"] floating enable, border pixel $floatBorder
+for_window [title="Wicd Network Manager"] floating enable, border pixel $floatBorder
 for_window [class="keepassxc"] floating enable; resize shrink width 640px; resize grow width 640px; resize shrink height 720px; resize grow height 720px;
 for_window [title="chromeIPass"] floating enabled, border pixel $floatBorder
 for_window [window_role="pop-up"] floating enable, border pixel $floatBorder
