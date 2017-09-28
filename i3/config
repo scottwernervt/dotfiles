@@ -226,6 +226,7 @@ exec --no-startup-id i3-msg 'workspace 10; exec i3-sensible-terminal -title htop
 # startup programs
 # --no-startup-id parameter disables startup-notification support
 exec --no-startup-id light-locker --lock-on-suspend
+exec --no-startup-id compton -CGb
 exec --no-startup-id wicd-gtk --tray
 exec --no-startup-id dropbox start
 exec --no-startup-id redshift-gtk
