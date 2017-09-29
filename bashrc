@@ -28,7 +28,7 @@ export EDITOR="$VISUAL"
 
 # Alias
 alias mv='mv -v'
-alias rm='rm -v'
+alias rm='rm -v -I'
 alias cp='cp -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
