@@ -1,36 +1,15 @@
-! After making changes, update and verify
-!! $ xrdb -load ~/.Xresources
-!! $ xrdb -query
+! Test: xrdb -load ~/.Xresources & xrdb -query
 
-
-! Color Theme
-#include "build-repos/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
-
-URxvt.color12: rgb:5c/5c/ff
-
-
-! urxvt
+! URxvt
 URxvt*loginShell: true
 URxvt*termName: rxvt-unicode
 URxvt*buffered: true
 URxvt*depth: 32
 URxvt.internalBorder: 8
-
-
-! General
+URxvt*borderless: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
 URxvt*saveLines: 5000
-URxvt*borderless: true
-
-
-! Font
-URxvt.font: xft:inconsolata:size=11:antialias=true:hinting=true
-urxvt.boldFont: xft:inconsolata:size=11:antialias=true:hinting=true
-
-!! URxvt.font: xft:mono:size=10:antialias=true
-!! URxvt.letterSpace: -1
-
 
 ! Scrollback position
 URxvt*scrollBar: false
@@ -40,23 +19,24 @@ URxvt*scrollWithBuffer: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
+! Fonts
+URxvt.font: xft:Hack:size=9:antialias=true:hinting=true
+URxvt.boldFont: xft:Hack:size=9:antialias=true:hinting=true:weight=bold
+URxvt.italicFont: xft:Hack:size=9:antialias=true:hinting=true:slant=italic
 
-! Perl extensions
+! Color Theme
+#include "build-repos/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
+URxvt.color12: rgb:5c/5c/ff
+
+! Extension
 URxvt.perl-ext-common: default,matcher,keyboard-select,clipboard
 URxvt.perl-ext: default,url-select
-
-! matcher (open urls with mouse click)
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
-
-! clipboard
-! update clipboard whenever primary gets updated
 URxvt.clipboard.autocopy: true
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-
-! url-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
