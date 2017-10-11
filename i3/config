@@ -197,7 +197,7 @@ bar {
 
         separator_symbol "    "
 
-        status_command py3status -c ~/.config/i3/i3status.conf -l ~/.config/i3/i3status.log
+        status_command py3status --dbus-notify -c ~/.config/i3/i3status.conf -l ~/.config/i3/i3status.log
         
         # tray_output primary
         colors {
