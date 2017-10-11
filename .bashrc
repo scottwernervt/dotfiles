@@ -22,9 +22,11 @@ complete -cf sudo
 # Do not save history if space proceeds command
 HISTCONTROL=ignorespace
 
-# Default editor
+# Variables
 export VISUAL=nano
 export EDITOR="$VISUAL"
+export ANDROID_HOME=/opt/android-sdk
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Alias
 alias mv='mv -v'
@@ -33,18 +35,12 @@ alias cp='cp -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=always'
-
-alias backup="~/tools/tinkerdev-backup.sh"
-alias Chrome="chromium"
-
-# Lock screen
 alias lock='light-locker-command -l'
+alias backup="~/tools/tinkerdev-backup.sh"
 
-# Build android apps from command line
-export ANDROID_HOME=/opt/android-sdk
-
-# Java: Non-reparenting window managers user should set the following environment variable
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-# added by travis gem
+# Added by travis gem
 [ -f /home/swerner/.travis/travis.sh ] && source /home/swerner/.travis/travis.sh
+
+# Nemo settings
+gsettings set org.nemo.desktop show-desktop-icons false
+gsettings set org.cinnamon.desktop.default-applications.terminal exec i3-sensible-terminal
