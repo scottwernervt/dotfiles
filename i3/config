@@ -156,14 +156,14 @@ bindsym $mod+r mode "resize"
 set $normalBorder 4
 set $floatBorder 6
 
-# Float by APPLICATION (WM_CLASS)
+# Float and modify borders for various applications
 for_window [class="File-roller"] floating enable, border pixel $floatBorder
-for_window [title="Wicd.*"] floating enable, border pixel $floatBorder
 for_window [class="keepassxc"] floating enable; resize shrink width 640px; resize grow width 640px; resize shrink height 720px; resize grow height 720px;
-for_window [title="chromeIPass"] floating enabled, border pixel $floatBorder
-for_window [class="blueman.*"] floating enable, border pixel $floatBorder
-for_window [window_role="pop-up"] floating enable, border pixel $floatBorder
+for_window [class="Blueman-.*"] floating enable, border pixel $floatBorder
 for_window [class="Eog"] border pixel $normalBorder
+for_window [title="Wicd.*"] floating enable, border pixel $floatBorder
+for_window [title="chromeIPass"] floating enabled, border pixel $floatBorder
+for_window [window_role="pop-up"] floating enable, border pixel $floatBorder
 
 # For instance: Assume you are on workspace "1: www" and switch to "2: IM" using 
 # mod+2 because somebody sent you a message. You don’t need to remember where you 
