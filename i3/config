@@ -216,9 +216,15 @@ bar {
 bindsym $mod+Print exec "deepin-screenshot --icon"
 
 # Bind volume up/down and mute keys to alsmiaxer
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+# bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+# bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+# bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+
+# Bind volume up, down, and mute keys to pulseaudio
+bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 && py3-cmd refresh volume_status
+bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 && py3-cmd refresh volume_status
+bindsym XF86AudioMute exec pulsemixer --toggle-mute && py3-cmd refresh volume_status
+
 
 # Opens htop and alsamixer on workspace 9
 exec --no-startup-id i3-msg 'workspace 10; exec i3-sensible-terminal -title htops -e htop; workspace 1'
