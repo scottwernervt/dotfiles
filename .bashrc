@@ -20,7 +20,8 @@ PS1='[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] : \[\e[0m\]\t\[\e[0m\]]\n
 complete -cf sudo
 
 # Do not save history if space proceeds command
-HISTCONTROL=ignorespace
+export HISTCONTROL=ignoreboth
+export HISTSIZE=1000000
 
 # Variables
 export VISUAL=nano
