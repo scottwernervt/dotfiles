@@ -16,7 +16,7 @@
 \x auto
 
 -- shows how long statements/queries took after running them
-\timing on
+\timing off
 
 -- if you're in a transaction and you've made a typo that produced an error, you don't have to roll 
 -- back the whole thing, it will automatically roll it back to the automatic savepoint that will 
