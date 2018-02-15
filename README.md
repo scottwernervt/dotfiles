@@ -7,9 +7,11 @@ Personal dot file customization and general setup for personal computers.
 Themes
 ------
 
+ 1. [arc-gtk-theme](https://github.com/horst3180/arc-theme)
+ 1. [arc-icon-theme](https://github.com/horst3180/arc-icon-theme)
  1. [base16-shell](https://github.com/chriskempson/base16-shell)
- 2. [dircolors-solarized](https://github.com/seebi/dircolors-solarized)
- 3. [base16-xresources](https://github.com/chriskempson/base16-xresources)
+ 1. [dircolors-solarized](https://github.com/seebi/dircolors-solarized)
+ 1. [base16-xresources](https://github.com/chriskempson/base16-xresources)
 
 
 Current setup
