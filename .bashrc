@@ -24,6 +24,7 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=1000000
 
 # Variables
+export BROWSER=firefox
 export VISUAL=nano
 export EDITOR="$VISUAL"
 export ANDROID_HOME=/opt/android-sdk
