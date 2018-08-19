@@ -37,7 +37,3 @@ exec i3 -V >> ~/.config/i3/logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
 
 # Set desktop background: https://wiki.archlinux.org/index.php/Feh
 sh ~/.fehbg &
-
-# Nemo settings
-gsettings set org.nemo.desktop show-desktop-icons false
-gsettings set org.cinnamon.desktop.default-applications.terminal exec i3-sensible-terminal
