@@ -156,7 +156,10 @@ bindsym $mod+r mode "resize"
 set $normalBorder 4
 set $floatBorder 6
 
+focus_follows_mouse no
+
 # Float and modify borders for various applications
+for_window [class="peek"] floating enable; border pixel $floatBorder
 for_window [class="Blueman-.*"] floating enable; border pixel $floatBorder
 for_window [class="Eog"] border pixel $normalBorder
 for_window [class="File-roller"] floating enable; border pixel $floatBorder
