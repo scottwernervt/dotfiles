@@ -7,11 +7,16 @@
 	[
 		"A File Icon",
 		"Advanced CSV",
+		"Anaconda",
+		"FileDiffs",
+		"GitGutter",
 		"Indent XML",
 		"LiveReload",
-		"Markdown Preview",
+		"MarkdownPreview",
 		"Material Theme",
 		"Package Control",
-		"Pretty JSON"
+		"Pretty JSON",
+		"SublimeLinter",
+		"SublimeLinter-shellcheck"
 	]
 }
