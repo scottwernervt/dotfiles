@@ -14,7 +14,10 @@ export TERM=rxvt-unicode
 # http://unix.stackexchange.com/a/124408/222247
 # https://www.digitalocean.com/community/tutorials/how-to-customize-your-bash-prompt-on-a-linux-vps
 # http://hopandfork.org/2017/05/29/my-bashrc.html
-PS1='[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] : \[\e[0m\]\t\[\e[0m\]]\n\$ '
+git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+}
+PS1='\[\e[0;36m\]\u\e[0m\]@\h : \[\e[0;34m\]\w\[\e[0m\] \[\e[0;35m\]$(git_branch)\e[0m\]: \[\e[0m\]\t\[\e[0m\]]\n\$ '
 
 # Autocomplete when using sudo
 complete -cf sudo
