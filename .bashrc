@@ -43,6 +43,7 @@ alias diff='diff --color=always'
 alias lock='light-locker-command -l'
 alias backup="~/tools/tinkerdev-backup.sh"
 alias Chrome="chromium"
+alias nemo="nemo --no-desktop"
 
 # Added by travis gem
 [ -f /home/swerner/.travis/travis.sh ] && source /home/swerner/.travis/travis.sh
