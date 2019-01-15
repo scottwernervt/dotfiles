@@ -38,10 +38,12 @@ export ANDROID_HOME=/opt/android-sdk
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Alias
-alias mv='mv -v'
-alias rm='rm -v -I'
 alias cp='cp -v'
-alias ls='ls --color=auto'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias rmdir='rmdir -v'
+alias ln='ln -v'
+alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 alias grep='grep --color=auto'
 alias diff='diff --color=always'
 alias lock='light-locker-command -l'
