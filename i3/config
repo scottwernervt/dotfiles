@@ -161,8 +161,8 @@ focus_follows_mouse no
 # Float and modify borders for various applications
 for_window [class="peek"] floating enable, border pixel $floatBorder
 for_window [class="Blueman-.*"] floating enable, border pixel $floatBorder
-for_window [class="Eog"] border pixel $normalBorder
 for_window [class="File-roller"] floating enable, border pixel $floatBorder
+for_window [class="Gnome-calculator"] floating enable, border pixel $floatBorder
 for_window [class="Pavucontrol"] floating enable, border pixel $floatBorder
 for_window [class="Viewnior"] border pixel $normalBorder
 for_window [class="com-intellij-updater-Runner"] floating enable; border pixel $floatBorder
