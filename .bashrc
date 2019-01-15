@@ -26,7 +26,7 @@ complete -cf sudo
 export HISTSIZE=
 export HISTCONTROL=ignoreboth
 export HISTCONTROL=erasedups
-export HISTTIMEFROMAT="%d/%m/%Y-%H:%M:%S"
+export HISTTIMEFORMAT="%Y%m%d %H:%M:%S "
 export HISTIGNORE='&:bg:fg:clear:ls:pwd:history:exit:make*:* --help:'
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
