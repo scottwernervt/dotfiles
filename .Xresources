@@ -1,41 +1,146 @@
-! Test: xrdb -load ~/.Xresources & xrdb -query
+!! Test
+!! - xrdb -merge < ~/.Xresources
+!! - xrdb -load ~/.Xresources & xrdb -query
+!!
+!! References
+!! - https://linux.die.net/man/1/urxvt
+!! - https://www.askapache.com/linux/rxvt-xresources
+!! - https://addy-dclxvi.github.io/post/configuring-urxvt/
+!! - https://github.com/hillyu/hill/blob/master/.Xresources
+!! - https://unixporn.reddit.com/comments/6b5ch8/how_to_achieve_macos_font_rendering_in_linux_in/
+!! - https://github.com/MartinSeeler/iterm2-material-design/blob/master/colors.md
 
-URxvt*loginShell: true
-URxvt*termName: rxvt-unicode
-URxvt*buffered: true
-URxvt*depth: 32
-URxvt.internalBorder: 8
-URxvt*borderless: true
-URxvt*cursorBlink: true
-URxvt*underlineColor: yellow
-URxvt*saveLines: 5000
+!! OSX Font Rendering
+Xft.dpi:        96
+Xft.antialias:  true      
+Xft.hinting:    false
+Xft.rgba:       rgb 
+Xft.autohint:   false
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
 
-! Scrollback position
-URxvt*scrollBar: false
-URxvt*scrollTtyOutput: false
-URxvt*scrollTtyKeypress: true
-URxvt*scrollWithBuffer: true
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
+!! General
+URxvt*termName:         xterm-256color
+URxvt*geometry:         125x45
+URxvt*loginShell:       true
+URxvt.iso14755:         false
+URxvt.iso14755_52:      false
+URxvt*depth:            32
+URxvt*internalBorder:   20
+URxvt*borderless:       true
+URxvt*visualBell:       false
+URxvt*fading:           15
+URxvt*saveLines:        4096
+URxvt*underlineColor:   #FFD740
 
-! Fonts
-URxvt.font: xft:Hack:size=9:antialias=true:hinting=true
-URxvt.boldFont: xft:Hack:size=9:antialias=true:hinting=true:weight=bold
-URxvt.italicFont: xft:Hack:size=9:antialias=true:hinting=true:slant=italic
+!! Scrolling
+URxvt*scrollBar:            false
+URxvt.scrollBar_right:      false
+URxvt*scrollTtyKeypress:    true
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*skipScroll:           true
 
-! Color Theme
-#include "build-repos/base16-xresources/xresources/base16-solarized-dark.Xresources"
-! URxvt.color12: rgb:5c/5c/ff
+!! Cursor
+URxvt.cursorBlink:      true
+URxvt.cursorUnderline:  true
 
-! Extension
-URxvt.perl-ext-common: default,matcher,keyboard-select,clipboard
-URxvt.perl-ext: default,url-select
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-URxvt.clipboard.autocopy: true
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher: /usr/bin/xdg-open
+!! Fonts
+URxvt.font:         xft:Hack:size=9:antialias=true:hinting=false
+URxvt.boldFont:     xft:Hack:size=9:antialias=true:hinting=false:weight=bold
+URxvt.italicFont:   xft:Hack:size=9:antialias=true:hinting=false:slant=italic
+URxvt.letterSpace:  0
+
+!! Color Schema: iTerm2 Material Design
+! special
+*.foreground:   #ECEFF1
+*.background:   #263238
+*.cursorColor:  #FFFFFF
+
+! black dark/light
+*color0:                #546E7A
+*color8:                #B0BEC5
+
+! red dark/light
+*color1:                #FF5252
+*color9:                #FF8A80
+
+! green dark/light
+*color2:                #5CF19E
+*color10:               #B9F6CA
+
+! yellow dark/light
+*color3:                #FFD740
+*color11:               #FFE57F
+
+! blue dark/light
+*color4:                #40C4FF
+*color12:               #80D8FF
+
+! magenta dark/light
+*color5:                #FF4081
+*color13:               #FF80AB
+
+! cyan dark/light
+*color6:                #64FCDA
+*color14:               #A7FDEB
+
+! white dark/light
+*color7:                #A7FDEB
+*color15:               #FFFFFF
+
+! Bold, Italic, Underline
+*.colorBD:  #8f93a2
+*.colorIT:
+*.colorUL:  #FFD740
+
+!! Swap CTRL and SUPER for OSX Experience
+URxvt.keysym.Mod4-question:     \177
+URxvt.keysym.Mod4-underscore:   \037
+URxvt.keysym.Mod4-6:            \036
+URxvt.keysym.Mod4-bracketright: \035
+URxvt.keysym.Mod4-backslash:    \034
+URxvt.keysym.Mod4-bracketleft:  \033
+URxvt.keysym.Mod4-z:            \032
+URxvt.keysym.Mod4-y:            \031
+URxvt.keysym.Mod4-x:            \030
+URxvt.keysym.Mod4-w:            \027
+URxvt.keysym.Mod4-v:            \026
+URxvt.keysym.Mod4-u:            \025
+URxvt.keysym.Mod4-t:            \024
+URxvt.keysym.Mod4-s:            \023
+URxvt.keysym.Mod4-r:            \022
+URxvt.keysym.Mod4-q:            \021
+URxvt.keysym.Mod4-p:            \020
+URxvt.keysym.Mod4-o:            \017
+URxvt.keysym.Mod4-n:            \016
+URxvt.keysym.Mod4-m:            \015
+URxvt.keysym.Mod4-l:            \014
+URxvt.keysym.Mod4-k:            \013
+URxvt.keysym.Mod4-j:            \012
+URxvt.keysym.Mod4-i:            \011
+URxvt.keysym.Mod4-h:            \010
+URxvt.keysym.Mod4-g:            \007
+URxvt.keysym.Mod4-f:            \006
+URxvt.keysym.Mod4-e:            \005
+URxvt.keysym.Mod4-d:            \004
+URxvt.keysym.Mod4-c:            \003
+URxvt.keysym.Mod4-b:            \002
+URxvt.keysym.Mod4-a:            \001
+URxvt.keysym.Mod4-at:           \000
+
+!! Extensions
+URxvt.perl-ext-common: default,matcher,clipboard,keyboard-select,url-select,-searchable-scrollback
+URxvt.matcher.button:       1
+URxvt.clipboard.autocopy:   true
+URxvt.copyCommand:          xclip -i -selection clipboard
+URxvt.pasteCommand:         xclip -o -selection clipboard
+URxvt.keysym.C-c:           perl:clipboard:copy
+URxvt.keysym.C-v:           perl:clipboard:paste
+URxvt.keysym.C-M-v:         perl:clipboard:paste_escaped
+URxvt.keysym.C-f:           perl:keyboard-select:search
+URxvt.keysym.Mod5-Escape:   perl:keyboard-select:activate
+URxvt.url-launcher:         xdg-open
+URxvt.url-select.launcher:  xdg-open
 URxvt.url-select.underline: true
+URxvt.underlineURLs:        true
