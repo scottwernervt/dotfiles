@@ -1,0 +1,5 @@
+#!/bin/sh
+# shellcheck shell=bash
+
+# Keep your home dir in Git with a detached working directory
+alias dgit='git --git-dir=$HOME/.dotfiles/.git --work-tree=$HOME'
