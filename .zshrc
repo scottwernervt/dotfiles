@@ -17,12 +17,6 @@
 
 export ZSH="/home/swerner/.oh-my-zsh"
 
-export BROWSER=firefox
-export VISUAL=nano
-export EDITOR="$VISUAL"
-export ANDROID_HOME=/opt/android-sdk
-export _JAVA_AWT_WM_NONREPARENTING=1
-
 # Theme
 # https://denysdovhan.com/spaceship-prompt/docs/Options.html
 ZSH_THEME="spaceship"
@@ -201,7 +195,6 @@ function cheat() {
     curl cht.sh/"$1"
 }
 
-# Shims
 # Enable PyEnv shims and autocompletion
 # https://github.com/pyenv/pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
