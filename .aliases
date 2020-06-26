@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 # shellcheck shell=bash
 
 # Keep your home dir in Git with a detached working directory
