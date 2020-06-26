@@ -15,7 +15,8 @@
 #   https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Using_X_configuration_files
 # 
 
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=${ZSH:-$HOME/.oh-my-zsh}
+export ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom}
 
 # Theme
 # https://denysdovhan.com/spaceship-prompt/docs/Options.html
