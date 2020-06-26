@@ -164,7 +164,7 @@ plugins=(
     zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+source "${ZSH}/oh-my-zsh.sh"
 
 # User configuration
 export LC_ALL=en_US.UTF-8
@@ -184,12 +184,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Aliases
-if [ -f ~/.aliases ]; then
-    source $HOME/.aliases
-fi
-
-
 # Query command cheatsheet at cht.sh
 # > cheat tar
 function cheat() {
@@ -200,4 +194,12 @@ function cheat() {
 # https://github.com/pyenv/pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
+fi
+
+# Commmon Aliases
+source "$HOME/.aliases"
+
+# Local Aliases
+if [ -f "$HOME/.local_aliases" ]; then
+    source "$HOME/.local_aliases"
 fi
