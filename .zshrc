@@ -15,7 +15,7 @@
 #   https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Using_X_configuration_files
 # 
 
-export ZSH="/home/swerner/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
 # https://denysdovhan.com/spaceship-prompt/docs/Options.html
