@@ -155,13 +155,14 @@ plugins=(
     docker
     git
     jsontools
+    node
     nvm
     pip
     pyenv
     sudo
     vscode
-    zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source "${ZSH}/oh-my-zsh.sh"
