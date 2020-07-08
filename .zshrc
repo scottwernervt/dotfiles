@@ -191,12 +191,6 @@ function cheat() {
     curl cht.sh/"$1"
 }
 
-# Enable PyEnv shims and autocompletion
-# https://github.com/pyenv/pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
-
 # Commmon Aliases
 source "$HOME/.aliases"
 
