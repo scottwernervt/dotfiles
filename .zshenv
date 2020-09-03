@@ -14,3 +14,8 @@ path=(
     "${path[@]}"
 )
 export PATH
+
+# Load workstation environment variables
+if [ -f "$HOME/.local_env" ]; then
+    source "$HOME/.local_env"
+fi

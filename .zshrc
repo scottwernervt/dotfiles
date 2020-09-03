@@ -191,10 +191,11 @@ function cheat() {
     curl cht.sh/"$1"
 }
 
-# Commmon Aliases
+# Load shared aliases
 source "$HOME/.aliases"
 
-# Local Aliases
+# Load workstation aliases
 if [ -f "$HOME/.local_aliases" ]; then
     source "$HOME/.local_aliases"
 fi
+
