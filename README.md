@@ -9,6 +9,12 @@ Themes and Plugins
  1. [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
  1. [Spaceship ZSH](https://denysdovhan.com/spaceship-prompt/)
 
+Workstation Options
+-------------------
+
+**Env Vars:** `touch $HOME/.local_aliases`
+**Aliases:** `touch $HOME/.local_aliases`
+
 Modifying
 ---------
 
