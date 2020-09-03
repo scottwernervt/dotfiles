@@ -18,6 +18,11 @@ Local Setup
 Modifying
 ---------
 
+First, set user name and email for home repo:
+
+    $ dgit config user.name "Scott Werner"
+    $ dgit config user.email scott.werner.vt@gmail.com
+
 A `dgit status` shows nothing, since we’ve gitignored everything:
 
     $ dgit status
