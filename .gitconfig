@@ -1,21 +1,30 @@
-[user]
-	name = Scott Werner
-	email = scott.werner.vt@gmail.com
-[credential]
-	helper = cache
-[core]
-	pager = diff-so-fancy | less --tabs=1,5 -RFX
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = yellow
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = red
+  untracked = yellow
+[alias]
+  po = push origin
+  pu = push upstream
+  c = commit
+  cp = cherry-pick
+  ch = checkout
+  st = status --column -sb
+[push]
+  default = simple
+[core]
+  pager = less -R
+[pager]
+  log = less
+  show = less -R
+  diff = less -R
+[help]
+  autocorrect = 1
