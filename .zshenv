@@ -15,7 +15,7 @@ path=(
 )
 export PATH
 
-# Load workstation environment variables
+# Load local user environment variables
 if [ -f "$HOME/.local_env" ]; then
     source "$HOME/.local_env"
 fi
