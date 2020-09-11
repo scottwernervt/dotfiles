@@ -1,9 +1,10 @@
 DOTFILES
 ========
 
-Themes and Plugins
+Themes, Fonts, and Plugins
 ------------------
 
+ 1. [otf-san-francisco-pro](https://aur.archlinux.org/packages/otf-san-francisco-pro/)
  1. [arc-gtk-theme](https://github.com/horst3180/arc-theme)
  1. [arc-icon-theme](https://github.com/horst3180/arc-icon-theme)
  1. [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
