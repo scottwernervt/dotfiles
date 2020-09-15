@@ -18,6 +18,7 @@
   cp = cherry-pick
   ch = checkout
   st = status --column -sb
+  recent = branch --sort=-committerdate -v
 [push]
   default = simple
 [core]
