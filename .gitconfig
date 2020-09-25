@@ -24,7 +24,7 @@
   cp = cherry-pick
   ch = checkout
   st = status --column -sb
-  recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(color:green)%(committerdate:relative)%(color:reset) %(color:yellow)%(refname:short)%(color:reset) %(contents:subject) %(authorname))'
+  recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(color:green)%(committerdate:relative)%(color:reset) %(color:yellow)%(refname:short)%(color:reset) %(contents:subject) (%(authorname))'
 [push]
   default = simple
 [core]
