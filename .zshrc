@@ -1,19 +1,30 @@
 #!/bin/zsh
 # shellcheck shell=bash
-
+#
 # Apple Shortcuts: Swap Control and Super for Code Keyboard 110 v2
 #
 # Set globally:
 #   localectl --no-convert set-x11-keymap us pc105 "" ctrl:swap_lwin_lctl,ctrl:swap_rwin_rctl
 #   cat /etc/X11/xorg.conf.d/00-keyboard.conf
+#
 # Set for current session:
 #    setxkbmap -option ctrl:swap_lwin_lctl -option ctrl:swap_rwin_rctl
+# 
 # Reset for current session:
 #    setxkbmap -option
+#
 # Reference:
 #   https://gist.github.com/rbreaves/f4cf8a991eaeea893999964f5e83eebb
 #   https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Using_X_configuration_files
 # 
+# .zshenv   | read every time       | env vars that are updated frequently
+# .zprofile | read at login         | env vars for that are NOT updated frequently
+# .zshrc    | read when interactive | interactive usage
+# .zlogin   | read at login         | read after .zshrc so shell is setup
+# .zlogout  | read at logout        | clear your terminal or resource
+# 
+# References:
+#   https://unix.stackexchange.com/a/487889
 
 export ZSH=${ZSH:-$HOME/.oh-my-zsh}
 export ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom}
