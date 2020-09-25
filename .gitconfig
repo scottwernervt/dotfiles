@@ -1,3 +1,8 @@
+[user]
+  name = Scott Werner
+  email = scott.werner.vt@gmail.com
+[includeIf "gitdir:~/Orgs/"]
+    path = ~/Orgs/.gitconfig
 [color]
   all = true
   ui = true
