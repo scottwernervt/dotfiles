@@ -191,6 +191,19 @@ function cheat() {
     curl cht.sh/"$1"
 }
 
+# Renaming files with mv without typing the name two times 
+# https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  newfilename="$1"
+  vared newfilename
+  command mv -v -- "$1" "$newfilename"
+}
+
 # Load shared and local user aliases
 for alias_path in "$HOME/.aliases" "$HOME/.local_aliases"; do
     if [ -f $alias_path ]; then
