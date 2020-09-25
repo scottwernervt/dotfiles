@@ -6,39 +6,33 @@
 # - restart:    $mod+Shift+r
 # - reload:     $mod+Shift+w
 # - exit:       $mod+Shift+e
+#
 
-# Swap Super/Control for Mac keybindings
+# swap Super/Control for OSX like keybindings
 set $mod Mod1
 set $sup Mod4
 
-floating_modifier $mod
+set $screenshots ~/screenshots/
 
-# Font
-font pango: Hack 10
+font pango: Hack 8
+default_border pixel 4
+default_floating_border pixel 4
 
-# Autostart
-exec --no-startup-id compton --config /dev/null -CGb
-exec --no-startup-id light-locker --lock-on-suspend
-exec --no-startup-id wicd-gtk --tray
-exec --no-startup-id fluxgui
-exec --no-startup-id thunar --daemon
-exec --no-startup-id dropbox start
-exec --no-startup-id keepassxc
-exec --no-startup-id flameshot
-exec --no-startup-id /home/swerner/.fehbg
-exec --no-startup-id i3-msg 'workspace 10; exec i3-sensible-terminal -title htops -e htop; workspace 1'
-assign [class="^URxvt$" title="^htops$"] 10
+workspace_auto_back_and_forth yes
+show_marks                    yes
+focus_follows_mouse           no
+floating_modifier             $mod
 
-# Shortcuts
+# shortcuts
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym Control+space exec dmenu_run
+
+bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym Control+space exec dmenu_run
-bindsym $mod+Shift+q   kill
 
 bindsym $mod+j         focus left
 bindsym $mod+Left      focus left
@@ -61,14 +55,12 @@ bindsym $mod+Shift+Up        move up
 bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+Right     move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
-
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle   split
-
 bindsym $mod+f fullscreen toggle
+bindsym $mod+h split      h
+bindsym $mod+v split      v
+bindsym $mod+s layout     stacking
+bindsym $mod+w layout     tabbed
+bindsym $mod+e layout     toggle   split
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -96,17 +88,13 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +3%;    py3-cmd refre
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -3%;    py3-cmd refresh volume_status"
 bindsym XF86AudioMute        exec "pactl set-sink-mute   0 toggle; py3-cmd refresh volume_status"
 
+bindsym Print          exec --no-startup-id flameshot gui
+bindsym XF86Tools      exec --no-startup-id flameshot gui
 
-# Bind screenshot app
-# TODO: Setup key shortcuts for different screenshots / recording
-# Current window
-#bindsym Mod4+Print exec --no-startup-id flameshot screen -p $FLAMESHOT
-# Fullscreen
-#bindsym Mod1+Mod4+Print exec --no-startup-id flameshot full -p $FLAMESHOT
-bindsym --release Print exec --no-startup-id flameshot gui
-bindsym --release XF86Tools exec --no-startup-id flameshot gui
+bindsym $mod+Print     exec --no-startup-id flameshot screen
+bindsym $mod+XF86Tools exec --no-startup-id flameshot screen
 
-# resize window (you can also use the mouse for that)
+# resize window using keyboard
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
 
@@ -129,44 +117,10 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
-# Customization
-set $normalBorder 4
-set $floatBorder  6
-
-focus_follows_mouse no
-workspace_auto_back_and_forth yes
-
-# Float application
-for_window [class="Blueman-.*"] floating enable, border pixel $floatBorder
-for_window [class="File-roller"] floating enable, border pixel $floatBorder
-for_window [class="Gnome-calculator"] floating enable, border pixel $floatBorder
-for_window [class="Pavucontrol"] floating enable, border pixel $floatBorder
-for_window [class="Viewnior"] border pixel $normalBorder
-for_window [class="com-intellij-updater-Runner"] floating enable; border pixel $floatBorder
-for_window [class="flameshot"] floating enable; border pixel $floatBorder
-for_window [class="peek"] floating enable, border pixel $floatBorder
-for_window [instance="keepassxc" class="KeePassXC"] floating enable, resize set 1024px 640px, border pixel $floatBorder
-for_window [title="ClipManager"] floating enable, resize set 600px 400px, border pixel $floatBorder
-for_window [title="Wicd Network Manager"] floating enable, resize set 720px 460px, border pixel $floatBorder
-for_window [window_role="About"] floating enable, border pixel $floatBorder
-for_window [window_role="Preferences"] floating enable, border pixel $floatBorder
-for_window [window_role="bubble"] floating enable, border pixel $floatBorder
-for_window [window_role="pop-up"] floating enable, border pixel $floatBorder
-for_window [window_role="task_dialog"] floating enable; border pixel $floatBorder
-for_window [window_type="dialog"] floating enable, border pixel $floatBorder
-for_window [window_type="menu"] floating enable, border pixel $floatBorder
-
-new_window pixel $normalBorder
-new_float  pixel $floatBorder
-
-# marks on windows are drawn in their window decoration.
-show_marks yes
-
-# Changing colors
-# class                 border  backgr. text    indicator
+# colors
+#                       border  backgr  text    indicator
 client.focused          #d02e54 #d02e54 #fdf6e3 #268bd2
 client.focused_inactive #002b36 #073642 #839496 #073642
 client.unfocused        #002b36 #073642 #839496 #073642
@@ -199,3 +153,37 @@ bar {
         # inactive_workspace #073642 #002b36 #839496
     }
 }
+
+# float apps
+for_window [class="Blueman-.*"]                  floating enable
+for_window [class="File-roller"]                 floating enable
+for_window [class="Gnome-calculator"]            floating enable
+for_window [class="Pavucontrol"]                 floating enable
+for_window [class="com-intellij-updater-Runner"] floating enable
+for_window [class="flameshot"]                   floating enable
+for_window [class="peek"]                        floating enable
+for_window [window_role="About"]                 floating enable
+for_window [window_role="Preferences"]           floating enable
+for_window [window_role="bubble"]                floating enable
+for_window [window_role="pop-up"]                floating enable
+for_window [window_role="task_dialog"]           floating enable
+for_window [window_type="dialog"]                floating enable
+for_window [window_type="menu"]                  floating enable
+
+# float apps with fixed dimensions
+for_window [instance="keepassxc" class="KeePassXC"] floating enable, resize set 1024px 640px
+for_window [title="ClipManager"] floating enable, resize set 600px 400px
+for_window [title="Wicd Network Manager"] floating enable, resize set 720px 460px
+
+# autostart
+exec --no-startup-id compton --config /dev/null -CGb
+exec --no-startup-id light-locker --lock-on-suspend
+exec --no-startup-id wicd-gtk --tray
+exec --no-startup-id fluxgui
+exec --no-startup-id thunar --daemon
+exec --no-startup-id dropbox start
+exec --no-startup-id keepassxc
+exec --no-startup-id flameshot
+exec --no-startup-id /home/swerner/.fehbg
+exec --no-startup-id i3-msg 'workspace 10; exec i3-sensible-terminal -title htops -e htop; workspace 1'
+assign [class="^URxvt$" title="^htops$"] 10
