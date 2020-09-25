@@ -7,21 +7,46 @@
 # - reload:     $mod+Shift+w
 # - exit:       $mod+Shift+e
 #
+set $screenshot_path ~/screenshots/
+
+# https://github.com/khamer/base16-i3/blob/master/themes/base16-material-palenight.config
+set $base00 #292D3E
+set $base01 #444267
+set $base02 #32374D
+set $base03 #676E95
+set $base04 #8796B0
+set $base05 #959DCB
+set $base06 #959DCB
+set $base07 #FFFFFF
+set $base08 #F07178
+set $base09 #F78C6C
+set $base0A #FFCB6B
+set $base0B #C3E88D
+set $base0C #89DDFF
+set $base0D #82AAFF
+set $base0E #C792EA
+set $base0F #FF5370
 
 # swap Super/Control for OSX like keybindings
 set $mod Mod1
 set $sup Mod4
 
-set $screenshot_path ~/screenshots/
-
-font pango: Hack 8
-default_border pixel 4
-default_floating_border pixel 4
-
+font                          pango: Hack 9
+default_border                pixel  3
+default_floating_border       pixel  4
 workspace_auto_back_and_forth yes
 show_marks                    yes
+hide_edge_borders             smart
 focus_follows_mouse           no
 floating_modifier             $mod
+
+#                       border  backgr  text    indicator
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
 # shortcuts
 bindsym $mod+Return exec i3-sensible-terminal
@@ -118,13 +143,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# colors
-#                       border  backgr  text    indicator
-client.focused          #d02e54 #d02e54 #fdf6e3 #268bd2
-client.focused_inactive #002b36 #073642 #839496 #073642
-client.unfocused        #002b36 #073642 #839496 #073642
-client.urgent           #002b36 #dc322f #fdf6e3 #002b36
-
 # i3bar
 bar {
     position          bottom
@@ -154,11 +172,15 @@ bar {
 }
 
 # float apps
+for_window [class="Lxappearance"]                floating enable
+for_window [class="Menu"]                        floating enable
 for_window [class="Blueman-.*"]                  floating enable
+for_window [class="feh"]                         floating enable
 for_window [class="File-roller"]                 floating enable
 for_window [class="Gnome-calculator"]            floating enable
 for_window [class="Pavucontrol"]                 floating enable
 for_window [class="com-intellij-updater-Runner"] floating enable
+for_window [class="jetbrains-toolbox"]           floating enable
 for_window [class="flameshot"]                   floating enable
 for_window [class="peek"]                        floating enable
 for_window [window_role="About"]                 floating enable
