@@ -31,7 +31,7 @@ set $base0F #FF5370
 set $mod Mod1
 set $sup Mod4
 
-font                          pango: Hack 9
+font                          xft: Hack 9
 default_border                pixel  3
 default_floating_border       pixel  4
 workspace_auto_back_and_forth yes
