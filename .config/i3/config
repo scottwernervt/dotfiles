@@ -159,13 +159,14 @@ set $floatBorder 6
 focus_follows_mouse no
 
 # Float and modify borders for various applications
-for_window [class="peek"] floating enable, border pixel $floatBorder
 for_window [class="Blueman-.*"] floating enable, border pixel $floatBorder
 for_window [class="File-roller"] floating enable, border pixel $floatBorder
 for_window [class="Gnome-calculator"] floating enable, border pixel $floatBorder
 for_window [class="Pavucontrol"] floating enable, border pixel $floatBorder
 for_window [class="Viewnior"] border pixel $normalBorder
 for_window [class="com-intellij-updater-Runner"] floating enable; border pixel $floatBorder
+for_window [class="flameshot"] floating enable; border pixel $floatBorder
+for_window [class="peek"] floating enable, border pixel $floatBorder
 for_window [instance="keepassxc" class="KeePassXC"] floating enable, resize set 1024px 640px, border pixel $floatBorder
 for_window [title="ClipManager"] floating enable, resize set 600px 400px, border pixel $floatBorder
 for_window [title="Wicd Network Manager"] floating enable, resize set 720px 460px, border pixel $floatBorder
