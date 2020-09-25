@@ -12,7 +12,7 @@
 set $mod Mod1
 set $sup Mod4
 
-set $screenshots ~/screenshots/
+set $screenshot_path ~/screenshots/
 
 font pango: Hack 8
 default_border pixel 4
@@ -88,11 +88,10 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +3%;    py3-cmd refre
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -3%;    py3-cmd refresh volume_status"
 bindsym XF86AudioMute        exec "pactl set-sink-mute   0 toggle; py3-cmd refresh volume_status"
 
-bindsym Print          exec --no-startup-id flameshot gui
-bindsym XF86Tools      exec --no-startup-id flameshot gui
-
-bindsym $mod+Print     exec --no-startup-id flameshot screen
-bindsym $mod+XF86Tools exec --no-startup-id flameshot screen
+bindsym $mod+Print     exec --no-startup-id flameshot gui
+bindsym $mod+XF86Tools exec --no-startup-id flameshot gui
+bindsym Print          exec --no-startup-id flameshot full --path $screenshot_path
+bindsym XF86Tools      exec --no-startup-id flameshot full --path $screenshot_path
 
 # resize window using keyboard
 mode "resize" {
