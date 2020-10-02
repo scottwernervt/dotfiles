@@ -3,3 +3,6 @@
 
 # Keep your home dir in Git with a detached working directory
 alias dgit='git --git-dir=$HOME/.dotfiles/.git --work-tree=$HOME'
+
+# Prevent less from clearing the screen on exit
+alias less='less -XR'
