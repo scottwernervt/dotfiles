@@ -183,7 +183,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export BROWSER=firefox
 export ANDROID_HOME=/opt/android-sdk
-export _JAVA_AWT_WM_NONREPARENTING=1
+# export _JAVA_AWT_WM_NONREPARENTING=1
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
@@ -195,6 +195,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# Help message for shell scripts
+# https://samizdat.dev/help-message-for-shell-scripts/
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
 
 # Query command cheatsheet at cht.sh
 # > cheat tar
