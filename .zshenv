@@ -3,11 +3,13 @@
 
 export PYENV_ROOT=$HOME/.pyenv
 export NODENV_ROOT=$HOME/.nodenv
+export GOPATH=$HOME/.go
 
 typeset -U PATH path
 path=(
     "$PYENV_ROOT/bin"
     "$NODENV_ROOT/shims"
+    "$GOPATH/bin"
     "/usr/local/bin"
     "$HOME/.local/bin"
     "$HOME/bin"
