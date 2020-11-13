@@ -197,14 +197,15 @@ for_window [title="ClipManager"] floating enable, resize set 600px 400px
 for_window [title="Wicd Network Manager"] floating enable, resize set 720px 460px
 
 # autostart
-exec --no-startup-id compton --config /dev/null -CGb
 exec --no-startup-id light-locker --lock-on-suspend
+exec --no-startup-id compton --config /dev/null -CGb
 exec --no-startup-id wicd-gtk --tray
-exec --no-startup-id fluxgui
 exec --no-startup-id thunar --daemon
 exec --no-startup-id dropbox start
 exec --no-startup-id keepassxc
 exec --no-startup-id flameshot
+exec --no-startup-id redshift-gtk
 exec --no-startup-id /home/swerner/.fehbg
 exec --no-startup-id i3-msg 'workspace 10; exec i3-sensible-terminal -title htops -e htop; workspace 1'
+
 assign [class="^URxvt$" title="^htops$"] 10
