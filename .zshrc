@@ -170,6 +170,7 @@ plugins=(
     nvm
     pip
     pyenv
+    ssh-agent
     sudo
     vscode
     zsh-autosuggestions
