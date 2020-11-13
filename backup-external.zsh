@@ -1,14 +1,16 @@
 #!/bin/zsh
+# shellcheck shell=bash
+
 export BORG_REPO="/run/media/swerner/BACKUP/$(hostname)"
 
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
 trap "echo $( date ) Backup interrupted >&2; exit 2" INT TERM
 
 if [ -z "$BORG_PASSPHRASE" ]; then
-  echo -n 'Repo passphrase:'
-  read -s BORG_PASSPHRASE
-  export BORG_PASSPHRASE
-  echo
+    echo -n 'Repo passphrase:'
+    read -s BORG_PASSPHRASE
+    export BORG_PASSPHRASE
+    echo
 fi
 
 info "Starting backup"
