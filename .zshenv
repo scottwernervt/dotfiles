@@ -1,14 +1,13 @@
 #!/bin/zsh
 # shellcheck shell=bash
 
-export PYENV_ROOT=$HOME/.pyenv
-export NODENV_ROOT=$HOME/.nodenv
-export GOPATH=$HOME/.go
+export GOPATH="$HOME/.go"
+export NVM_DIR="$HOME/.nvm"
+export PYENV_ROOT="$HOME/.pyenv"
 
 typeset -U PATH path
 path=(
     "$PYENV_ROOT/bin"
-    "$NODENV_ROOT/shims"
     "$GOPATH/bin"
     "/usr/local/bin"
     "$HOME/.local/bin"
