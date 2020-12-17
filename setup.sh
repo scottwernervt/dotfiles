@@ -17,8 +17,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # fi
 
 # OSX packages
-# if [[ "$OSTYPE" == "darwin"* ]]; then
-# fi
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install --cask keycastr
+fi
 
 echo "Activating $HOME/.zshrc"
 source "$HOME/.zshrc"
