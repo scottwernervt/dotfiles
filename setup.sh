@@ -13,11 +13,13 @@ curl https://pyenv.run | bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 # Linux packages
-# if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-# fi
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    yay -S gron
+fi
 
 # OSX packages
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install gron
     brew install --cask keycastr
 fi
 
