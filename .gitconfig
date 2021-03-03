@@ -34,6 +34,7 @@
   default = simple
 [core]
   pager = less -XR 
+	attributesfile = ~/.gitattributes
 [pager]
   log = less
   show = less -R
