@@ -202,6 +202,7 @@ exec --no-startup-id compton --config /dev/null -CGb
 exec --no-startup-id wicd-gtk --tray
 exec --no-startup-id thunar --daemon
 exec --no-startup-id dropbox start
+exec --no-startup-id nextcloud --background
 exec --no-startup-id keepassxc
 exec --no-startup-id flameshot
 exec --no-startup-id redshift-gtk
