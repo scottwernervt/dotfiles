@@ -194,12 +194,12 @@ for_window [window_type="menu"]                  floating enable
 # float apps with fixed dimensions
 for_window [instance="keepassxc" class="KeePassXC"] floating enable, resize set 1024px 640px
 for_window [title="ClipManager"] floating enable, resize set 600px 400px
-for_window [title="Wicd Network Manager"] floating enable, resize set 720px 460px
+for_window [title="Network Connections"] floating enable, resize set 720px 460px
 
 # autostart
 exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id compton --config /dev/null -CGb
-exec --no-startup-id wicd-gtk --tray
+exec --no-startup-id nm-applet
 exec --no-startup-id thunar --daemon
 exec --no-startup-id dropbox start
 exec --no-startup-id nextcloud --background
