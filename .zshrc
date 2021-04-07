@@ -229,6 +229,10 @@ for alias_path in "$HOME/.aliases" "$HOME/.local_aliases"; do
     fi
 done
 
+# Enable auto-activation of pyenv virtualenvs
+# https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin
+eval "$(pyenv virtualenv-init -)"
+
 # Automatically load node version found in .nvmrc
 # https://github.com/nvm-sh/nvm#zsh
 autoload -U add-zsh-hook
