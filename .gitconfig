@@ -1,6 +1,6 @@
 [user]
   name = Scott Werner
-  email = scott.werner.vt@gmail.com
+  email = scott.werner.vt@protonmail.com
 [includeIf "gitdir:~/Orgs/"]
     path = ~/Orgs/.gitconfig
 [color]
