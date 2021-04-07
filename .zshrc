@@ -188,11 +188,8 @@ export ANDROID_HOME=/opt/android-sdk
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export VISUAL=vi
+export EDITOR="$VISUAL"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
