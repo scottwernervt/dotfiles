@@ -63,41 +63,41 @@ SPACESHIP_PROMPT_ORDER=(
     vi_mode       # Vi-mode indicator
     char          # Prompt character
 )
-SPACESHIP_RPROMPT_ORDER=(
-    rprompt_prefix  # force items on same line as left prompt
-    exit_code       # Exit code section
-    exec_time       # Execution time
-    jobs            # Background jobs indicator
-    time            # Time stamps section
-    rprompt_suffix  # force items on same line as left prompt
-)
+# SPACESHIP_RPROMPT_ORDER=(
+#     rprompt_prefix  # force items on same line as left prompt
+#     exit_code       # Exit code section
+#     exec_time       # Execution time
+#     jobs            # Background jobs indicator
+#     time            # Time stamps section
+#     rprompt_suffix  # force items on same line as left prompt
+# )
 
-DEFAULT_PREFIX=": "
-DEFAULT_CHAR_COLOR=black
+# DEFAULT_PREFIX=": "
+# DEFAULT_CHAR_COLOR=black 
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_SYMBOL=">"
 SPACESHIP_CHAR_SYMBOL_ROOT="#"
 SPACESHIP_DIR_COLOR=blue
-SPACESHIP_DIR_PREFIX=$DEFAULT_PREFIX
+# SPACESHIP_DIR_PREFIX=$DEFAULT_PREFIX
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_EXEC_TIME_COLOR=white
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_GIT_PREFIX=$DEFAULT_PREFIX
+# SPACESHIP_EXEC_TIME_COLOR=white
+# SPACESHIP_EXIT_CODE_SHOW=true
+# SPACESHIP_GIT_PREFIX=$DEFAULT_PREFIX
 SPACESHIP_HOST_COLOR=black
 SPACESHIP_HOST_COLOR_SSH=magenta
-SPACESHIP_HOST_SHOW=always
-SPACESHIP_HOST_SHOW_FULL=true
-SPACESHIP_HOST_PREFIX="@"
-SPACESHIP_TIME_COLOR=black
-SPACESHIP_TIME_PREFIX=""
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_USER_COLOR=black
-SPACESHIP_USER_PREFIX=""
-SPACESHIP_USER_SUFFIX=""
-SPACESHIP_USER_SHOW=always
-SPACESHIP_CHAR_COLOR_SUCCESS=$DEFAULT_CHAR_COLOR
-SPACESHIP_CHAR_COLOR_FAILURE=$DEFAULT_CHAR_COLOR
+# SPACESHIP_HOST_SHOW=always
+# SPACESHIP_HOST_SHOW_FULL=true
+# SPACESHIP_HOST_PREFIX="@"
+# SPACESHIP_TIME_COLOR=black
+# SPACESHIP_TIME_PREFIX=""
+# SPACESHIP_TIME_SHOW=true
+# SPACESHIP_USER_COLOR=black
+# SPACESHIP_USER_PREFIX=""
+# SPACESHIP_USER_SUFFIX=""
+# SPACESHIP_USER_SHOW=always
+# SPACESHIP_CHAR_COLOR_SUCCESS=$DEFAULT_CHAR_COLOR
+# SPACESHIP_CHAR_COLOR_FAILURE=$DEFAULT_CHAR_COLOR
 
 # Workaround to support left and right prompts
 # https://github.com/denysdovhan/spaceship-prompt/issues/558#issuecomment-451918947
