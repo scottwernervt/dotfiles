@@ -170,6 +170,7 @@ plugins=(
     nvm
     pip
     pyenv
+    safe-paste
     ssh-agent
     sudo
     vscode
