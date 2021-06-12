@@ -229,7 +229,9 @@ done
 
 # Enable auto-activation of pyenv virtualenvs
 # https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin
-eval "$(pyenv virtualenv-init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)" 
+fi
 
 # Automatically load node version found in .nvmrc
 # https://github.com/nvm-sh/nvm#zsh
