@@ -6,3 +6,6 @@ if dircolors_path="$(type -p "dircolors")" || [[ -z $dircolors_path ]]; then
 fi
 
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# https://github.com/pyenv/pyenv/#installation
+eval "$(pyenv init --path)"
