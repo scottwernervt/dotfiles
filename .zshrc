@@ -254,3 +254,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
