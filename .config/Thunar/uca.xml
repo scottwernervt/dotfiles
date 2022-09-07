@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1542136124266467-1</unique-id>
+	<command>exec alacritty --working-directory %f</command>
+	<description>Open terminal in current folder path</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>bleachbit</icon>
+	<name>Secure delete</name>
+	<unique-id>1542136649892626-1</unique-id>
+	<command>/home/scwerner/.config/Thunar/actions/secure-delete.sh %F</command>
+	<description>Securely shred files and folders using Bleachbit.</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>object-rotate-right</icon>
+	<name>Rotate image CW</name>
+	<unique-id>1649531461242999-1</unique-id>
+	<command>/home/scwerner/.config/Thunar/actions/image_rotate_cw.sh %F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>object-rotate-left</icon>
+	<name>Rotate image CCW</name>
+	<unique-id>1649531547138916-2</unique-id>
+	<command>/home/scwerner/.config/Thunar/actions/image_rotate_ccw.sh %F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>
