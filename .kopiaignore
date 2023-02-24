@@ -1,0 +1,55 @@
+# Personal
+builds/
+containers/
+downloads/
+storage/
+
+# History
+.bash_history
+.local/share/Trash
+.local/share/gvfs-metadata
+.zsh_history
+apps/.trash
+lost+found
+Thumbs.db
+
+# NextCloud Sync
+*sync_*.db*
+.config/Nextcloud/logs
+
+# Caching
+**/.cache
+**/Cache
+**/CacheStorage
+**/cache
+**/tmp
+
+# Browser
+.config/chromium
+.mozilla
+
+# Package managers
+.cargo
+.go
+.lein
+.m2
+.npm
+.nvm
+.pyenv
+.rustup
+.yarn
+node_modules
+
+# Developement
+.eggs
+.git
+.local/share/JetBrains
+.mypy_cache
+.tox
+.travis
+__pycache__
+_pytest
+test-sdist
+venv
+venvs
+virtualenv
