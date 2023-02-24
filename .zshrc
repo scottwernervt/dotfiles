@@ -55,12 +55,12 @@ SPACESHIP_PROMPT_ORDER=(
     conda         # conda virtualenv section
     pyenv         # Pyenv section
     dotnet        # .NET section
-    ember         # Ember.js section
+    #ember         # Ember.js section
     kubectl       # Kubectl context section
     terraform     # Terraform workspace section
     line_sep      # Line break
     #battery       # Battery level and status
-    vi_mode       # Vi-mode indicator
+    #vi_mode       # Vi-mode indicator
     char          # Prompt character
 )
 # SPACESHIP_RPROMPT_ORDER=(
@@ -161,6 +161,10 @@ setopt share_history          # share command history data
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+#
+# Enable Dracula syntax highlighting colors
+# https://draculatheme.com/zsh-syntax-highlighting
+source "$HOME/themes/dracula-theme/themes/zsh-syntax-highlighting/zsh-syntax-highlighting.sh"
 plugins=(
     colored-man-pages
     docker
@@ -171,7 +175,7 @@ plugins=(
     pip
     pyenv
     safe-paste
-    ssh-agent
+    # ssh-agent
     sudo
     vscode
     zsh-autosuggestions
@@ -221,7 +225,7 @@ function mv() {
 }
 
 # Load shared and local user aliases
-for alias_path in "$HOME/.aliases" "$HOME/.local_aliases"; do
+for alias_path in "$HOME/.aliases" "$HOME/.aliases_local"; do
     if [ -f $alias_path ]; then
         source $alias_path
     fi
@@ -230,7 +234,8 @@ done
 # Enable auto-activation of pyenv virtualenvs
 # https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)" 
+  eval "$(pyenv init -)"
+  # eval "$(pyenv init --path)" 
 fi
 
 # Automatically load node version found in .nvmrc
@@ -256,4 +261,3 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

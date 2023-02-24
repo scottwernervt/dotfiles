@@ -1,0 +1,8 @@
+# Default config for sway
+# Read `man 5 sway` for a complete reference.
+
+## Custom commands
+set $move_cmd $HOME/.config/sway/bin/sway_move
+
+include $HOME/.config/sway/sway.d/*.conf
+include /etc/sway/config.d/*
